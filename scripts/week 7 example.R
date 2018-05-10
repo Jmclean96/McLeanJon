@@ -10,6 +10,6 @@ fish_data_cat = fish_data %>%
 
 
 library(tidyverse)
-
-ggplot(fish_data, aes(x = length, y = scalelength, color = lakeid)) +
+#Creates a scatterplot of length and scale length, then groups by lake id
+ggplot(fish_data_cat, aes(length, scalelength, color = lakeid)) +
          geom_point()
